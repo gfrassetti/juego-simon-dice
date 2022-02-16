@@ -1,0 +1,23 @@
+{
+  "name": "simon-dice",
+  "version": "1.0.0",
+  "description": "Juego de Simon Dice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfrassetti/simon-dice.git"
+  },
+  "author": "Guido Frassetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfrassetti/simon-dice/issues"
+  },
+  "homepage": "https://github.com/gfrassetti/simon-dice#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0"
+  }
+}

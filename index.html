@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simon Dice</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="D:\javaScript\simon-dice\node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>    
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-2" id="puntaje">
+            Puntaje: 
+          </div>
+          <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert", style="text-align: center;">
+                Presiona "Jugar" para comenzar!
+            </div>
+            <div style="margin: 20px; border: 10px;">Tiempo: </div>
+          </div>
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-primary">Jugar!</button>
+          </div>
+        </div>
+      </div>
+      <div class="container"id="tablero">
+        <div class="row">
+          <div class="col-sm">
+            <div  id="cuadro-1" class="cuadro">A</div>
+          </div>
+          <div class="col-sm">
+            <div  id="cuadro-2" class="cuadro">B</div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div  id="cuadro-3" class="cuadro">C</div>
+            </div>
+            <div class="col-sm">
+                <div  id="cuadro-4" class="cuadro">D</div>
+            </div>
+          </div>
+      </div>
+<script src='main.js'></script>
+</body>
+</html>
