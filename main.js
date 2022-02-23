@@ -33,6 +33,7 @@ function manejarRonda() {
   secuenciaUsuario = []; //se reinicia la lista
   ronda++;
   puntos++;
+  document.getElementById("ronda").textContent = "Ronda: " + ronda;
 }
 
 function bloquearInput() {
@@ -52,6 +53,35 @@ function inputUsuario(e) {
 
   resaltarCuadro($cuadro);
   secuenciaUsuario.push($cuadro);
+
+  const $cuadromaquina = secuenciaMaquina[secuenciaUsuario.length - 1];
+  console.log($cuadromaquina);
+  if ($cuadro.id !== $cuadromaquina.id) {
+    perder();
+    return;
+  }
+  if (secuenciaUsuario.length === secuenciaMaquina.length) {
+    bloquearInput();
+    document.getElementById("puntaje").textContent = "Puntaje: " + puntos;
+    setTimeout(manejarRonda, 1000);
+  }
+}
+
+function perder() {
+  bloquearInput();
+  actualizarEstado('Perdiste! toca "Jugar" para volver a empezar', true);
+}
+
+function actualizarEstado(estado, error = false) {
+  const $estado = document.querySelector("#estado");
+  $estado.textContent = estado;
+  if (error) {
+    $estado.classList.remove("alert-primary");
+    $estado.classList.add("alert-danger");
+  } else {
+    $estado.classList.remove("alert-danger");
+    $estado.classList.add("alert-primary");
+  }
 }
 
 function resaltarCuadro($cuadro) {
